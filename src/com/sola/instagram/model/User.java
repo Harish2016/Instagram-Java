@@ -22,7 +22,7 @@ public class User extends InstagramModel {
 
 	public User(JSONObject obj, String accessToken) throws JSONException {
 		super(obj, accessToken);
-		setId(obj.getInt("id"));
+		setId(Integer.parse(obj.getString("id")));
 		setUserName(obj.getString("username"));
 		setFullName(obj.getString("full_name"));
 		setProfilePictureURI(obj.getString("profile_picture"));
